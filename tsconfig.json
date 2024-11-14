@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // "rootDirs": ["src"],
+    "outDir": "dist",
+    "lib": ["es2020"],
+    "target": "es6",
+    "module": "CommonJS",
+    "baseUrl": "./",
+    // "baseUrl": ".",
+
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "codegen.ts"]
+}

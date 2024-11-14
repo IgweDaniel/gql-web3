@@ -1,0 +1,40 @@
+{
+  "name": "gql-web3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "copy-files": "copyfiles -u 1 src/schema.graphql dist/",
+    "start": "npm run compile && npm run copy-files && node ./dist/index.js",
+    "dev": "tsx ./src/index",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "deploy-contract": "npx hardhat ignition deploy ./ignition/modules/Counter.js --network"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4",
+    "graphql": "^16.9.0",
+    "mongoose": "^8.8.1",
+    "web3": "^4.15.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.3",
+    "@graphql-codegen/introspection": "4.0.3",
+    "@graphql-codegen/typescript": "4.1.1",
+    "@graphql-codegen/typescript-mongodb": "3.0.0",
+    "@graphql-codegen/typescript-resolvers": "4.4.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "copyfiles": "^2.4.1",
+    "hardhat": "^2.22.15",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+}
